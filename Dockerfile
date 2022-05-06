@@ -1,7 +1,7 @@
 FROM openmicroscopy/omero-web:latest
 
 USER root
-
+RUN yum install git
 RUN /opt/omero/web/venv3/bin/pip install \
         omero-figure \
 #        omero-iviewer \
