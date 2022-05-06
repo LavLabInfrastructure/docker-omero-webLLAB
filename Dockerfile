@@ -10,7 +10,7 @@ RUN /opt/omero/web/venv3/bin/pip install \
         omero-parade \
 #        omero-webtagging-autotag \
 #        omero-webtagging-tagsearch \
-        git+https://github.com/barrettMCW/omero-iviewerLLAB.git 
+        https://github.com/barrettMCW/omero-iviewerLLAB/suites/6407785013/artifacts/233459949
 
 ADD 01-default-webapps.omero /opt/omero/web/config/
 
