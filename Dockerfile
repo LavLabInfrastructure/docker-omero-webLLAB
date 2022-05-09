@@ -7,7 +7,7 @@ RUN /opt/omero/web/venv3/bin/pip install \
         llab-omero-iviewer \
 #        omero-fpbioimage \
         omero-mapr \
-        omero-parade \
+        omero-parade 
 #        omero-webtagging-autotag \
 #        omero-webtagging-tagsearch \
 
