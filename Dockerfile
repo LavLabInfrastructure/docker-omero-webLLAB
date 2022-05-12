@@ -15,5 +15,3 @@ RUN /opt/omero/web/venv3/bin/pip install \
 ADD 01-default-webapps.omero /opt/omero/web/config/
 
 USER omero-web
-RUN /opt/omero/server/OMERO.server/bin/omero config set omero.web.caches '{"default": {"BACKEND": "django_redis.cache.RedisCache","LOCATION": "redis://cache:6379/0"}}'
-RUN /opt/omero/server/OMERO.server/bin/omero config set omero.web.session_engine 'django.contrib.sessions.backends.cache'

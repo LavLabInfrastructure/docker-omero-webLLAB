@@ -1,5 +1,9 @@
 # OMERO.web configuration
 
+# redis-cache
+config set omero.web.caches '{"default": {"BACKEND": "django_redis.cache.RedisCache","LOCATION": "redis://cache:6379/0"}}'
+config set omero.web.session_engine 'django.contrib.sessions.backends.cache'
+
 # omero-figure
 config append -- omero.web.apps '"omero_figure"'
 config append -- omero.web.open_with '["omero_figure", "new_figure", {"supported_objects": ["images"], "target": "_blank", "label": "OMERO.figure"}]'
