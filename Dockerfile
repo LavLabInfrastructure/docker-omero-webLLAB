@@ -5,13 +5,12 @@ RUN yum -y install git
 RUN yum -y install 'django-redis<4.9'
 RUN /opt/omero/web/venv3/bin/pip install \
         omero-figure \
-#        omero-iviewer \
+        llab-omero-iviewer \
 #        omero-fpbioimage \
         omero-mapr \
-        omero-parade \
+        omero-parade 
 #        omero-webtagging-autotag \
 #        omero-webtagging-tagsearch \
-        git+https://github.com/barrettMCW/omero-iviewerLLAB.git 
 
 ADD 01-default-webapps.omero /opt/omero/web/config/
 
