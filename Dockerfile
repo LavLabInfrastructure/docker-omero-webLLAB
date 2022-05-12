@@ -2,7 +2,7 @@ FROM openmicroscopy/omero-web:latest
 
 USER root
 RUN yum -y install git 
-RUN yum -y install 'django-redis<4.9'
+RUN yum -y install redis python-redis
 RUN /opt/omero/web/venv3/bin/pip install \
         omero-figure \
         llab-omero-iviewer \
