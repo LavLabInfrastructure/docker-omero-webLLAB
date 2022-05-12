@@ -1,7 +1,7 @@
 # OMERO.web configuration
 
 # redis-cache
-config set omero.web.caches '{"default": {"BACKEND": "django_redis.cache.RedisCache","LOCATION": "redis://cache:6379/0"}}'
+config set omero.web.caches '{"default": {"BACKEND": "django_redis.cache.RedisCache","LOCATION": "redis://redis:6379/0"}}'
 config set omero.web.session_engine 'django.contrib.sessions.backends.cache'
 
 # omero-figure
