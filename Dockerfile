@@ -5,7 +5,7 @@ RUN yum -y install redis python-redis
 # omero web plugins
 RUN /opt/omero/web/venv3/bin/pip install \
         omero-figure \
-        llab-omero-iviewer \
+        omero-iviewer \
         omero-mapr \
         omero-parade 
 # web owner
