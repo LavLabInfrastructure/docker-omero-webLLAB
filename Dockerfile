@@ -7,7 +7,8 @@ RUN /opt/omero/web/venv3/bin/pip install \
         omero-figure \
         omero-iviewer \
         omero-mapr \
-        omero-parade 
+        omero-parade \
+        omero-webtagging-tagsearch
 # web owner
 USER omero-web
 #.omero config file
