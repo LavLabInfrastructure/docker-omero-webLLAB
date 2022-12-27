@@ -2,7 +2,7 @@ FROM node:16 as iviewer
 RUN apt update && apt upgrade -y
 RUN apt install -y ant npm nodejs python3-wheel python3-pip
 RUN pip3 install --upgrade pip wheel 
-RUN git clone https://github.com/barrettMCW/omero-iviewer.git
+RUN git clone https://github.com/LavLabInfrastructure/omero-iviewer.git
 
 WORKDIR /omero-iviewer
 RUN npm update && \
