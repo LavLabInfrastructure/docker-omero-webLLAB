@@ -36,6 +36,3 @@ USER omero-web
 
 #.omero config file
 ADD configs/*.omero /opt/omero/web/config/
-
-# modify startup scripts
-COPY scripts/* /startup/
