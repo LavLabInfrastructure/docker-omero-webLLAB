@@ -24,7 +24,7 @@ RUN /opt/omero/web/venv3/bin/python3 -m pip install wheel && \
     /opt/omero/web/venv3/bin/python3 -m pip install -r /tmp/py_plugins.txt
 # iviewer
 RUN /opt/omero/web/venv3/bin/pip3 uninstall -y omero-iviewer
-COPY --from=iviewer /omero_iviewer* /tmp
+COPY --from=iviewer /tmp/omero_iviewer* /tmp
 RUN /opt/omero/web/venv3/bin/pip3 install /tmp/omero_iviewer*
 
 # web owner
