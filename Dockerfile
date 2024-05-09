@@ -14,7 +14,7 @@ RUN cd plugin && \
     mv dist/omero_iviewer* /
 
 # omeroweb build
-FROM openmicroscopy/omero-web:latest
+FROM openmicroscopy/omero-web:5.24.0
 HEALTHCHECK CMD [ "curl", "-f", "http://localhost:4080" ]
 
 # add plugin file
