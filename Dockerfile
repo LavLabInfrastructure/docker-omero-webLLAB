@@ -3,11 +3,10 @@ FROM node:16 as iviewer
 RUN apt update && apt upgrade -y
 RUN apt install -y ant npm nodejs python3-wheel python3-pip
 RUN pip3 install --upgrade pip wheel 
-RUN git clone https://github.com/LavLabInfrastructure/omero-iviewer.git && cd /omero-iviewer && npm run prod
-# package iviewer
-RUN cd plugin && \
-    python3 setup.py bdist_wheel && \
-    mv dist/omero_iviewer* /
+RUN git clone https://github.com/LavLabInfrastructure/omero-iviewer.git && \
+    cd /omero-iviewer && npm run prod && \
+    cd plugin && python3 setup.py bdist_wheel && \
+    mv dist/omero_iviewer* /tmp
 
 # omeroweb build
 FROM openmicroscopy/omero-web-standalone:5.24.0
