@@ -2,5 +2,5 @@ omero-mapr
 omero-figure
 omero-parade
 omero-gallery
-omero-webtagging-autotag
-omero-webtagging-tagsearch
+omero-autotag
+omero-tagsearch
