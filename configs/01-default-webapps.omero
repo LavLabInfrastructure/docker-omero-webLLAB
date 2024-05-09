@@ -15,11 +15,13 @@ config append -- omero.web.mapr.config '{"menu": "anyvalue", "config":{"default"
 config append -- omero.web.apps '"omero_parade"'
 config append -- omero.web.ui.center_plugins '["Parade", "omero_parade/init.js.html", "omero_parade"]'
 
-# omero-webtagging
-config append -- omero.web.apps '"omero_webtagging_autotag"'
-config append -- omero.web.apps '"omero_webtagging_tagsearch"'
-config append -- omero.web.ui.center_plugins '["Auto Tag", "omero_webtagging_autotag/auto_tag_init.js.html", "auto_tag_panel"]'
+# omero-autotag
+config append -- omero.web.apps '"omero_autotag"'
+config append -- omero.web.ui.center_plugins '["Auto Tag", "omero_autotag/auto_tag_init.js.html", "auto_tag_panel"]'
 
+# omero-tagsearch
+config append -- omero.web.apps '"omero_tagsearch"'
+config append -- omero.web.ui.top_links '["Tag Search", "tagsearch"]'
 # omero-gallery
 config append -- omero.web.apps '"omero_gallery"'
 
