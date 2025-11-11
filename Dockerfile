@@ -2,7 +2,7 @@
 FROM node:25-bookworm as iviewer
 RUN apt update && apt upgrade -y
 RUN apt install -y ant npm nodejs python3-full python3-wheel python3-pip python3-venv
-RUN pip3 install --upgrade pip wheel 
+RUN pip3 install --upgrade --break-system-packages pip wheel 
 RUN git clone https://github.com/LavLabInfrastructure/omero-iviewer.git && \
     cd /omero-iviewer && npm run prod && \
     cd plugin && python3 setup.py bdist_wheel && \
