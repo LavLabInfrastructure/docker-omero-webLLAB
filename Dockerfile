@@ -1,5 +1,5 @@
 # build custom iviewer branch
-FROM node:16 as iviewer
+FROM node:25-bookworm as iviewer
 RUN apt update && apt upgrade -y
 RUN apt install -y ant npm nodejs python3-wheel python3-pip
 RUN pip3 install --upgrade pip wheel 
