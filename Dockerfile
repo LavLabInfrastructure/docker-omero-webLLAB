@@ -9,7 +9,7 @@ RUN git clone https://github.com/LavLabInfrastructure/omero-iviewer.git && \
     mv dist/omero_iviewer* /tmp
 
 # omeroweb build
-FROM openmicroscopy/omero-web-standalone:5.24.0
+FROM openmicroscopy/omero-web-standalone:5.29.2
 HEALTHCHECK CMD [ "curl", "-f", "http://localhost:4080" ]
 
 # add plugin file
